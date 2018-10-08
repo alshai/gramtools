@@ -24,7 +24,7 @@ set(SOURCE
 set(INCLUDE
         ${PROJECT_SOURCE_DIR}/libgramtools/include)
 
-find_package(BZip2)
+# find_package(BZip2)
 
 include_directories()
 
@@ -99,6 +99,8 @@ set(INCLUDE_FILES
         ${INCLUDE}/prg/dna_ranks.hpp
         ${INCLUDE}/prg/fm_index.hpp)
 
+set(BZIP_INCLUDE_DIRS /home-4/tmun1@jhu.edu/.local/include)
+set(BZIP2_LIBRARIES /home-4/tmun1@jhu.edu/.local/lib/libbz2.a)
 # libgramtools
 add_library(gramtools STATIC
         ${SOURCE_FILES}
