@@ -3,7 +3,7 @@ execute_process(COMMAND mkdir -p ${CMAKE_CURRENT_BINARY_DIR}/src/htslib-1.6)
 ExternalProject_Add(htslib
         DOWNLOAD_COMMAND  wget https://github.com/samtools/htslib/releases/download/1.6/htslib-1.6.tar.bz2 --timestamping
         DOWNLOAD_DIR      "${CMAKE_CURRENT_BINARY_DIR}/download"
-        CONFIGURE_COMMAND bash -c "cd ${CMAKE_CURRENT_BINARY_DIR}/src/htslib-1.6 && autoheader && autoconf && env CPPFLAGS=-I${CMAKE_CURRENT_BINARY_DIR}/include LDFLAGS=-L${CMAKE_CURRENT_BINARY_DIR}/lib ./configure --prefix=${CMAKE_CURRENT_BINARY_DIR}"
+        CONFIGURE_COMMAND bash -c "cd ${CMAKE_CURRENT_BINARY_DIR}/src/htslib-1.6 && autoheader && autoconf && env CPPFLAGS=-I/home-4/tmun1@jhu.edu/.local/include -I${CMAKE_CURRENT_BINARY_DIR}/include LDFLAGS=-L${CMAKE_CURRENT_BINARY_DIR}/lib ./configure --prefix=${CMAKE_CURRENT_BINARY_DIR}"
         BUILD_COMMAND     bash -c "cd ${CMAKE_CURRENT_BINARY_DIR}/src/htslib-1.6 && make && make install"
         INSTALL_COMMAND   ""
         TEST_COMMAND      "")
