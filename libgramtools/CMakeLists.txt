@@ -70,6 +70,9 @@ set(SOURCE_FILES
         ${SOURCE}/prg/fm_index.cpp)
 
 set(INCLUDE_FILES
+        /home-net/home-4/tmun1@jhu.edu/.local/include/bzlib.h
+        ${INCLUDE}/bzlib.h
+
         ${INCLUDE}/common/utils.hpp
         ${INCLUDE}/common/timer_report.hpp
 
